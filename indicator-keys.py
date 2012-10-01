@@ -59,7 +59,7 @@ class indicator(Thread):
 
         #make temp icon
         self.ik = AppIndicator.Indicator.new("indicator-keys",
-                                             "indicatorkeys",
+                                             "indicator-keys-main",
                                              AppIndicator.IndicatorCategory.HARDWARE)
         self.ik.set_status(AppIndicator.IndicatorStatus.ACTIVE)
         self.make_img()
@@ -106,12 +106,12 @@ class indicator(Thread):
 
             # workaround for refresh
             if self.run == 0:
-                self.ind_image.save("/usr/share/icons/Faenza/actions/22/indicatorkeys2.png")
-                self.ik.set_icon("indicatorkeys2")
+                self.ind_image.save("/usr/share/icons/Faenza/actions/22/indicator-keys-main2.png")
+                self.ik.set_icon("indicator-keys-main2")
                 self.run = 1
             else:
-                self.ind_image.save("/usr/share/icons/Faenza/actions/22/indicatorkeys.png")
-                self.ik.set_icon("indicatorkeys")
+                self.ind_image.save("/usr/share/icons/Faenza/actions/22/indicator-keys-main.png")
+                self.ik.set_icon("indicator-keys-main")
                 self.run = 0
 
 
