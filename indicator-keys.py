@@ -30,8 +30,8 @@ class indicator(Thread):
             self.notify_icn_on = ("indicator-keys-on")
             self.notify_icn_off = ("indicator-keys-off")
 
-        self.img_on = Image.open("indicator-keys-on-icon.png")
-        self.img_off = Image.open("indicator-keys-off-icon.png")
+        self.img_on = Image.open("img/indicator-keys-on-icon.png")
+        self.img_off = Image.open("img/indicator-keys-off-icon.png")
 
         self.first_run()
         self.make_menu()
